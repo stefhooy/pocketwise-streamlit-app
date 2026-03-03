@@ -1,0 +1,11 @@
+[project]
+name = "pocketwise-streamlit-app"
+version = "0.1.0"
+description = "Streamlit demo app using the PocketWise Finance package."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+  "pandas>=2.3.3",
+  "streamlit>=1.54.0",
+]
