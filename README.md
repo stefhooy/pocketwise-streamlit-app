@@ -1,43 +1,66 @@
 # PocketWise Streamlit Demo
 
-This repository is a small Streamlit project that uses the `pocketwise-finance` Python package published on TestPyPI.
+A Streamlit app that uses the [`pocketwise-finance`](https://test.pypi.org/project/pocketwise-finance/) package to categorize bank transactions and produce monthly spending summaries.
 
-The purpose is to demonstrate that the library can be installed and reused in a separate application.
+> The purpose of this project is to demonstrate that the PocketWise library (published on TestPyPI) can be installed and reused in a separate application.
+
+---
 
 ## Setup
 
-Create a virtual environment with uv and install dependencies:
+### 1. Create a virtual environment and install dependencies
 
 ```bash
 uv venv
 uv sync
 ```
-Install the package from TestPyPI (and dependencies from PyPI):
+
+### 2. Install `pocketwise-finance` from TestPyPI
+
 ```bash
-uv pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple pocketwise-finance
-#Run the app
+uv pip install \
+  -i https://test.pypi.org/simple/ \
+  --extra-index-url https://pypi.org/simple \
+  pocketwise-finance
+```
+
+### 3. Run the app
+
+```bash
 uv run streamlit run main.py
 ```
-Expected CSV format
 
-The app expects a CSV file with these columns:
+The app will open in your browser at `http://localhost:8501`.
 
-date (YYYY-MM-DD)
+---
 
-description
+## How to use
 
-amount
+The dashboard walks you through three steps:
 
+1. **Upload a CSV** file containing your transactions.
+2. **Review or edit the categorization rules** (regex patterns mapped to spending categories).
+3. **View results** — categorized transactions, a monthly summary table, and a bar chart.
 
-## 4) Run it
-From the Streamlit repo root:
+---
 
-```powershell
-uv run streamlit run main.py
+## Expected CSV format
 
-Upload a sample CSV like:
+Your file must include the following columns:
 
+| Column        | Format       | Example              |
+|---------------|--------------|----------------------|
+| `date`        | `YYYY-MM-DD` | `2026-03-01`         |
+| `description` | free text    | `Mercadona purchase` |
+| `amount`      | number       | `-35.60`             |
+
+Sample CSV:
+
+```csv
 date,description,amount
 2026-03-01,Mercadona purchase,-35.60
 2026-03-02,Netflix subscription,-12.99
 2026-03-03,Salary,2500.00
+```
+
+> Negative amounts are treated as expenses; positive amounts as income.
