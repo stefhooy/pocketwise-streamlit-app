@@ -11,12 +11,13 @@ Create a virtual environment with uv and install dependencies:
 ```bash
 uv venv
 uv sync
-
+```
 Install the package from TestPyPI (and dependencies from PyPI):
-
+```bash
 uv pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple pocketwise-finance
-Run the app
+#Run the app
 uv run streamlit run main.py
+```
 Expected CSV format
 
 The app expects a CSV file with these columns:
