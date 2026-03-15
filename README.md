@@ -64,3 +64,16 @@ date,description,amount
 ```
 
 > Negative amounts are treated as expenses; positive amounts as income.
+
+---
+
+## Sample data
+
+A ready-to-use example file is included in the `sample_data_example/` folder:
+
+```
+sample_data_example/
+└── sample_transactions.csv
+```
+
+It contains 6 months of transactions (Jan – Jun 2026) across categories including Groceries, Transport, Subscriptions, and Eating Out. Upload it directly in Step 1 to see the app in action without needing your own bank export.
