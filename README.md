@@ -18,10 +18,7 @@ uv sync
 ### 2. Install `pocketwise-finance` from TestPyPI
 
 ```bash
-uv pip install \
-  -i https://test.pypi.org/simple/ \
-  --extra-index-url https://pypi.org/simple \
-  pocketwise-finance
+uv pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple pocketwise-finance
 ```
 
 ### 3. Run the app
