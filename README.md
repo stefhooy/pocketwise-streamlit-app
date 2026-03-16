@@ -1,5 +1,15 @@
 # PocketWise Streamlit Demo
 
+**Team Members - Group 3:**
+
+* JUAN CAMILO LUJÁN GONZÁLEZ
+* LAURENZ JAKOB KLUTH
+* RALUCA-TEO GOGOSOIU
+* SILVIA MENDOZA MEDINA
+* STEPHAN PENTCHEV STEFANOV
+
+---
+
 A Streamlit app that uses the [`pocketwise-finance`](https://test.pypi.org/project/pocketwise-finance/) package to categorize bank transactions and produce monthly spending summaries.
 
 > The purpose of this project is to demonstrate that the PocketWise library (published on TestPyPI) can be installed and reused in a separate application.
